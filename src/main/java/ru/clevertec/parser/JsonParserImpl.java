@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class JsonParserImpl implements JsonParser {
     private Map<String, JsonValueHandler> handlers;
@@ -101,8 +100,11 @@ public class JsonParserImpl implements JsonParser {
 
     private List<Object> parseJsonArray(String jsonArray) {
         jsonArray = jsonArray.substring(1, jsonArray.length() - 1).trim();
-        return Stream.of(jsonArray.split(","))
-                .map(String::trim)
+//        return Stream.of(jsonArray.split(","))
+//                .map(String::trim)
+//                .map(this::parseJsonValue)
+//                .collect(Collectors.toList());
+        return splitPairs(jsonArray).stream()
                 .map(this::parseJsonValue)
                 .collect(Collectors.toList());
     }
