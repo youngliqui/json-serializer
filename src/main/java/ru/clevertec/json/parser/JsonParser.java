@@ -1,4 +1,4 @@
-package ru.clevertec.parser;
+package ru.clevertec.json.parser;
 
 import java.util.Map;
 

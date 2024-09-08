@@ -1,4 +1,4 @@
-package ru.clevertec.service;
+package ru.clevertec.service.reflection;
 
 import java.lang.reflect.Field;
 import java.util.List;

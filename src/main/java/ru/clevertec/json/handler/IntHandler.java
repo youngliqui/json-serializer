@@ -1,4 +1,4 @@
-package ru.clevertec.handler;
+package ru.clevertec.json.handler;
 
 public class IntHandler implements JsonValueHandler {
     @Override

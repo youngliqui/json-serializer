@@ -1,4 +1,4 @@
-package ru.clevertec.validator;
+package ru.clevertec.json.validator;
 
 import java.util.Optional;
 

@@ -1,7 +1,7 @@
-package ru.clevertec;
+package ru.clevertec.json;
 
 import ru.clevertec.exception.DeserializationException;
-import ru.clevertec.service.DeserializationService;
+import ru.clevertec.service.deserialization.DeserializationService;
 
 public class JsonSerializer {
     private DeserializationService deserializationService;

@@ -1,4 +1,4 @@
-package ru.clevertec.service;
+package ru.clevertec.service.reflection;
 
 import ru.clevertec.exception.ReflectionsException;
 

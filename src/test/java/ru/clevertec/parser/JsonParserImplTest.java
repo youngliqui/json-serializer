@@ -2,6 +2,8 @@ package ru.clevertec.parser;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.clevertec.json.parser.JsonParser;
+import ru.clevertec.json.parser.JsonParserImpl;
 
 import java.util.Arrays;
 import java.util.Map;

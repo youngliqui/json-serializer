@@ -1,6 +1,6 @@
-package ru.clevertec.parser;
+package ru.clevertec.json.parser;
 
-import ru.clevertec.handler.*;
+import ru.clevertec.json.handler.*;
 
 import java.util.*;
 import java.util.function.Function;
@@ -100,10 +100,6 @@ public class JsonParserImpl implements JsonParser {
 
     private List<Object> parseJsonArray(String jsonArray) {
         jsonArray = jsonArray.substring(1, jsonArray.length() - 1).trim();
-//        return Stream.of(jsonArray.split(","))
-//                .map(String::trim)
-//                .map(this::parseJsonValue)
-//                .collect(Collectors.toList());
         return splitPairs(jsonArray).stream()
                 .map(this::parseJsonValue)
                 .collect(Collectors.toList());

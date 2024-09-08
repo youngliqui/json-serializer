@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Person {
-    private int age;
-    private boolean isEmployee;
+public class Store {
     private String name;
-    private Address address;
-    private String[] hobbies;
+    private String category;
 }

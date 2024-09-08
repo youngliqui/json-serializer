@@ -1,6 +1,6 @@
-package ru.clevertec.handler;
+package ru.clevertec.json.handler;
 
-import ru.clevertec.parser.JsonParser;
+import ru.clevertec.json.parser.JsonParser;
 
 public class ObjectHandler implements JsonValueHandler {
     private JsonParser jsonParser;

@@ -1,6 +1,7 @@
-package ru.clevertec.service;
+package ru.clevertec.service.deserialization;
 
-import ru.clevertec.parser.JsonToMapConverter;
+import ru.clevertec.json.JsonToMapConverter;
+import ru.clevertec.service.reflection.ReflectionService;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
@@ -11,9 +12,9 @@ public class DeserializationServiceImpl implements DeserializationService {
     private JsonToMapConverter converter;
     private ReflectionService reflectionService;
 
-    public DeserializationServiceImpl() {
-        this.converter = new JsonToMapConverter();
-        this.reflectionService = new ReflectionServiceImpl();
+    public DeserializationServiceImpl(JsonToMapConverter converter, ReflectionService reflectionService) {
+        this.converter = converter;
+        this.reflectionService = reflectionService;
     }
 
     @Override
