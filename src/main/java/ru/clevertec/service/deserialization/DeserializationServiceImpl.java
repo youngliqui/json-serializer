@@ -1,5 +1,6 @@
 package ru.clevertec.service.deserialization;
 
+import ru.clevertec.annotation.JsonField;
 import ru.clevertec.json.JsonToMapConverter;
 import ru.clevertec.service.reflection.ReflectionService;
 
@@ -30,7 +31,9 @@ public class DeserializationServiceImpl implements DeserializationService {
     private void deserializeObject(Object instance, Map<String, Object> jsonMap, Class<?> tClass) {
         for (Field field : tClass.getDeclaredFields()) {
             field.setAccessible(true);
-            String fieldName = field.getName();
+
+            String fieldName = field.isAnnotationPresent(JsonField.class) ?
+                    field.getAnnotation(JsonField.class).value() : field.getName();
 
             if (!jsonMap.containsKey(fieldName)) {
                 continue;

@@ -16,7 +16,7 @@ public class Main {
                     "address": {
                         "street": "Central",
                         "homeNumber": 44,
-                        "nearbyStores": [
+                        "stores": [
                             {
                                 "name": "Supermarket",
                                 "category": "Groceries"

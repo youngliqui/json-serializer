@@ -3,6 +3,7 @@ package ru.clevertec.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.clevertec.annotation.JsonField;
 
 import java.util.List;
 
@@ -12,5 +13,6 @@ import java.util.List;
 public class Address {
     private String street;
     private int homeNumber;
+    @JsonField("stores")
     private List<Store> nearbyStores;
 }
