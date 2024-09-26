@@ -2,8 +2,8 @@ package ru.clevertec.parser;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.clevertec.json.validator.JsonValidator;
-import ru.clevertec.json.validator.JsonValidatorImpl;
+import ru.clevertec.deserialization.validator.JsonValidator;
+import ru.clevertec.deserialization.validator.JsonValidatorImpl;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

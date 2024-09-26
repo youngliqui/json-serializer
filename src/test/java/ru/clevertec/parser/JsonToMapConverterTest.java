@@ -6,9 +6,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import ru.clevertec.exception.JsonValidationException;
-import ru.clevertec.json.parser.JsonParser;
-import ru.clevertec.json.JsonToMapConverter;
-import ru.clevertec.json.validator.JsonValidator;
+import ru.clevertec.deserialization.parser.JsonParser;
+import ru.clevertec.deserialization.converter.JsonToMapConverter;
+import ru.clevertec.deserialization.validator.JsonValidator;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;

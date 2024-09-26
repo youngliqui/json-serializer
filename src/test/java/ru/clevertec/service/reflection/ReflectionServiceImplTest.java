@@ -3,7 +3,8 @@ package ru.clevertec.service.reflection;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.clevertec.exception.ReflectionsException;
-import ru.clevertec.model.Person;
+import ru.clevertec.reflection.ReflectionServiceImpl;
+import ru.clevertec.test.testmodels.Person;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -80,8 +81,8 @@ class ReflectionServiceImplTest {
 
     @Test
     void testCreateCollection() {
-        List<String> list = (List<String>) reflectionService.createCollection(ArrayList.class, String.class, 2);
-        String[] array = (String[]) reflectionService.createCollection(String[].class, String.class, 2);
+        List<String> list = (List<String>) reflectionService.createDataStructure(ArrayList.class, String.class, 2);
+        String[] array = (String[]) reflectionService.createDataStructure(String[].class, String.class, 2);
 
         assertThat(list).hasSize(0);
         assertThat(array).hasSize(2);
@@ -90,7 +91,7 @@ class ReflectionServiceImplTest {
     @Test
     void testCreateCollectionUnsupportedType() {
         assertThrows(ReflectionsException.class,
-                () -> reflectionService.createCollection(Integer.class, String.class, 2));
+                () -> reflectionService.createDataStructure(Integer.class, String.class, 2));
     }
 
     @Test

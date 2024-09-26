@@ -2,14 +2,16 @@ package ru.clevertec.service.deserialization;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.clevertec.json.JsonToMapConverter;
-import ru.clevertec.json.parser.JsonParserImpl;
-import ru.clevertec.json.validator.JsonValidatorImpl;
-import ru.clevertec.model.Address;
-import ru.clevertec.model.Person;
-import ru.clevertec.model.Store;
-import ru.clevertec.service.reflection.ReflectionService;
-import ru.clevertec.service.reflection.ReflectionServiceImpl;
+import ru.clevertec.deserialization.converter.JsonToMapConverter;
+import ru.clevertec.deserialization.parser.JsonParserImpl;
+import ru.clevertec.deserialization.service.DeserializationService;
+import ru.clevertec.deserialization.service.DeserializationServiceImpl;
+import ru.clevertec.deserialization.validator.JsonValidatorImpl;
+import ru.clevertec.reflection.ReflectionService;
+import ru.clevertec.reflection.ReflectionServiceImpl;
+import ru.clevertec.test.testmodels.Address;
+import ru.clevertec.test.testmodels.Person;
+import ru.clevertec.test.testmodels.Store;
 
 import java.util.List;
 
